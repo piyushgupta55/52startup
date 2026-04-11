@@ -1,0 +1,403 @@
+🚀
+52STARTUP.COM
+Make India Great Again
+52 Startups. 52 Weeks. One Mission.
+📅
+Duration
+52 Weeks
+🏗️
+Startups
+52 Projects
+🌏
+Mission
+Inspire India
+🌐
+Domain
+52startup.com
+
+Author
+Vision
+Document Type
+Product Requirements Document (PRD)
+Version
+1.0 — Initial Draft
+
+1. Executive Summary
+52Startup.com is a personal challenge website built around one ambitious vision: building 52 startups in 52 weeks, one per week, every week for a full year. The platform documents this entrepreneurial journey and showcases each project publicly, acting as both a portfolio and an inspiration hub rooted in the spirit of Make India Great Again.
+The website serves three core purposes:
+	•	Showcase all 52 startups with live links, thumbnails, and week numbers.
+	•	Inspire Indian builders, founders, and dreamers to ship fast and think big.
+	•	Build in public — demonstrate the journey from idea to live product weekly.
+
+2. Vision & Mission
+Vision Statement
+Make India Great Again — by building, shipping, and inspiring one startup at a time. 52 weeks, 52 ideas, infinite possibilities.
+
+Mission
+Create a living, public record of 52 startups built in 52 consecutive weeks, showing that Indian builders can move fast, build in public, and inspire the next generation of entrepreneurs.
+
+The founder's story is the product. The website must feel bold, energetic, and deeply Indian — like a rocket launching from the heart of Bharat.
+
+3. Target Audience
+Segment
+Who They Are
+What They Want
+Aspiring Founders
+Young Indians with startup dreams, 18–30
+Proof that fast building is possible
+Tech Community
+Developers, designers, indie hackers
+Technical inspiration & project ideas
+Investors & Scouts
+Angels, VCs scouting early talent
+Founder work ethic & product quality
+General Public
+Curious Indians, media, students
+Motivational content, India pride
+
+4. Website Structure & Pages
+The website is a single-page application (SPA) or minimal multi-page site with the following sections:
+4.1 Hero Section
+Element
+Specification
+Headline
+"Make India Great Again" — large, bold, orange, full-width
+Sub-headline
+"52 Startups. 52 Weeks. One Mission."
+Background
+Deep dark (navy/black) with animated floating icons
+Icon — Rocket 🚀
+Small rockets scattered, some animated upward
+Icon — Ashoka Wheel ☸️
+Represents India's heritage & progress
+Icon — Indian Flag 🇮🇳
+Tricolor used sparingly for pride
+Icon — Laptop 💻
+Represents tech & building
+Icon — Lightbulb 💡
+Represents ideas & innovation
+Icon — Rupee ₹
+Represents Indian economy & entrepreneurship
+Icon — Star ⭐
+Represents excellence & ambition
+CTA Button
+"See All Startups ↓" — orange, rounded, bold
+Color Palette
+Primary orange #E8610A, saffron #FF9933, dark bg #0D0D0D
+Typography
+Large display font, 96px–120px headline on desktop
+4.2 Current Week Banner
+Immediately below the hero section, a prominent banner shows the current week's startup. This keeps the site feeling live and updated.
+Element
+Specification
+Week Badge
+Big badge: e.g. WEEK 2 in orange on dark bg
+Startup Name
+Name of the current week's startup, large text
+One-liner
+Single sentence describing what it does
+Status
+LIVE NOW 🟢 indicator
+Visit Button
+Orange CTA button linking to the startup's URL
+Thumbnail
+Screenshot/logo of the current startup
+4.3 All 52 Startups Grid
+The main content section displays all 52 startup slots in a responsive grid. Completed startups show their thumbnail and link. Future weeks show a placeholder with countdown.
+Element
+Specification
+Layout
+Responsive grid — 4 columns desktop, 2 tablet, 1 mobile
+Card: Completed
+Thumbnail image, week number badge, startup name, live link
+Card: In Progress
+Current week — pulsing orange border, animated badge
+Card: Upcoming
+Dark placeholder card, week number, countdown timer
+Hover State
+Card lifts with shadow, orange glow border
+Click Action
+Opens startup URL in new tab
+Filter Bar
+Optional: filter by category/tag
+4.4 About / Mission Section
+A short personal section about the founder's vision, the "Make India Great Again" philosophy, and what drives this challenge. Can include a founder photo, short bio, and a quote.
+4.5 Footer
+	•	Domain: 52startup.com
+	•	Social links: Twitter/X, LinkedIn, GitHub, YouTube
+	•	Contact email
+	•	"Built in India 🇮🇳" tagline
+	•	Subscribe/notify CTA for newsletter or weekly updates
+
+5. Design System
+5.1 Color Palette
+Color Name
+Hex Code
+Usage
+Primary Orange
+#E8610A
+CTAs, headline accent, badges, borders
+Saffron
+#FF9933
+Gradient accents, icons, active states
+Deep Black
+#0D0D0D
+Hero background, card backgrounds
+Dark Gray
+#1A1A1A
+Section backgrounds, cards
+Off-White
+#F5F5F0
+Body text on dark backgrounds
+Warm White
+#FFF8F2
+Light section backgrounds, hover fills
+India Green
+#138808
+Subtle India flag accent, success states
+5.2 Typography
+Element
+Font
+Size / Weight
+Hero Headline
+Space Grotesk / Syne
+96–120px, ExtraBold 800
+Section Heading
+Space Grotesk
+40–48px, Bold 700
+Card Title
+Inter / Space Grotesk
+18–22px, SemiBold 600
+Body Text
+Inter
+16px, Regular 400
+Week Badge
+Space Grotesk
+12–14px, Bold 700, uppercase
+5.3 Animation & Motion
+	•	Hero background icons float upward slowly with slight drift (CSS keyframes)
+	•	Rocket icons have a subtle upward thrust animation every few seconds
+	•	Cards have smooth lift-and-glow on hover (transform + box-shadow transition)
+	•	Current week card pulses with an orange glow border
+	•	Page load: stagger-animate the grid cards into view
+	•	Week number counter animates up when section comes into viewport
+
+6. Features & Functionality
+MVP Features (Launch)
+#
+Feature
+Priority
+Status
+1
+Hero section with headline & animated background icons
+P0 — Critical
+To Build
+2
+Current week banner (dynamic week number + startup info)
+P0 — Critical
+To Build
+3
+52 startup grid with images and links
+P0 — Critical
+To Build
+4
+Responsive design (mobile + tablet + desktop)
+P0 — Critical
+To Build
+5
+Startup card: completed / in-progress / upcoming states
+P0 — Critical
+To Build
+6
+About / founder mission section
+P1 — High
+To Build
+7
+Footer with socials and newsletter CTA
+P1 — High
+To Build
+8
+SEO meta tags, Open Graph for social sharing
+P1 — High
+To Build
+9
+Category/tag filter for startups grid
+P2 — Medium
+Post-MVP
+10
+Blog / build log for each startup
+P2 — Medium
+Post-MVP
+11
+Email subscribe / weekly update newsletter
+P2 — Medium
+Post-MVP
+12
+Dark/light mode toggle
+P3 — Low
+Future
+13
+Analytics dashboard (public stats page)
+P3 — Low
+Future
+
+7. Recommended Tech Stack
+Layer
+Recommended
+Why
+Frontend
+Next.js 14 (React)
+SEO, fast builds, great DX
+Styling
+Tailwind CSS
+Rapid UI, consistent design tokens
+Animation
+Framer Motion
+Smooth, declarative animations
+CMS / Data
+JSON file or Notion API
+Easy weekly updates, no DB needed
+Hosting
+Vercel
+Free tier, auto-deploy from GitHub
+Images
+Cloudinary or Vercel Blob
+Optimized startup thumbnails
+Analytics
+Umami or Plausible
+Privacy-first, lightweight
+Domain
+52startup.com (owned ✅)
+Custom domain already secured
+
+8. Content Schema — Startup Entry
+Each startup is represented by a data entry. Below is the recommended schema for each of the 52 startups:
+Field
+Type
+Description
+week
+Number
+Week number 1–52
+name
+String
+Startup name
+tagline
+String
+One-sentence description (max 80 chars)
+url
+String
+Live URL of the startup
+thumbnail
+Image URL
+Screenshot or logo (16:9 ratio, 800×450px)
+category
+String
+e.g. SaaS, Tool, AI, Social, Fintech
+status
+Enum
+"completed" | "in-progress" | "upcoming"
+launchDate
+Date
+Date launched (YYYY-MM-DD)
+tags
+Array
+e.g. ["AI", "India", "Free"]
+blogUrl
+String (optional)
+Link to build log / blog post
+
+9. Milestones & Timeline
+Phase
+Deliverable
+Target
+Status
+Phase 0
+PRD finalized, design system defined
+Week 0
+In Progress
+Phase 1
+Hero + current week banner live
+Week 1
+To Do
+Phase 2
+Full 52 grid (with placeholders) live
+Week 1
+To Do
+Phase 3
+About section + footer + SEO
+Week 2
+To Do
+Phase 4
+Newsletter + filters + blog links
+Week 4
+To Do
+Phase 5
+Analytics, public stats, social sharing
+Week 8
+To Do
+Phase 6
+Week 52 — full showcase & reflection post
+Week 52
+Future
+
+10. Success Metrics
+Metric
+3-Month Target
+12-Month Target
+Monthly website visitors
+5,000
+50,000+
+Total startups launched
+12
+52
+Newsletter subscribers
+500
+10,000
+Social media followers (all platforms)
+1,000
+25,000
+Startup links clicked (per month)
+2,000
+20,000
+Press / media mentions
+1
+10+
+Avg. time on site
+> 90 sec
+> 2 min
+
+11. Non-Functional Requirements
+Performance
+	•	Page load time < 2 seconds on 4G mobile
+	•	Lighthouse score > 90 for Performance, Accessibility, SEO
+	•	Images lazy-loaded; thumbnails served in WebP format
+Accessibility
+	•	WCAG 2.1 AA compliance minimum
+	•	Keyboard navigable; screen reader friendly
+	•	Color contrast ratio > 4.5:1 for all text
+SEO
+	•	Each startup card has structured data (JSON-LD)
+	•	Open Graph + Twitter Card meta tags on every page
+	•	Sitemap.xml and robots.txt configured
+	•	Descriptive alt text on all images
+Reliability
+	•	99.9% uptime via Vercel hosting
+	•	Weekly automated backups of startup data
+
+12. Inspiration & Reference Sites
+Reference
+What to Borrow
+levels.io / nomadlist.com
+Build-in-public energy, minimal but punchy design
+12startups.com
+Similar concept, week-by-week grid layout
+producthunt.com
+Card design, hover states, product thumbnails
+India Stack / DPIIT sites
+National pride visual language, colors
+Linear.app
+Dark mode elegance, orange accent usage
+
+🚀  Make India Great Again  🇮🇳
+52 ideas. 52 weeks. One founder. Infinite impact.
+52startup.com
