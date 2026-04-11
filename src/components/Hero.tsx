@@ -65,7 +65,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1
-            className="text-6xl md:text-8xl lg:text-9xl font-display font-bold uppercase tracking-tighter mb-6 leading-[0.9]"
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold uppercase tracking-tighter mb-5 md:mb-6 leading-[0.9]"
             style={{ textShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
           >
             <span className="text-primary-orange">Make India</span> <br />
@@ -78,7 +78,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-xl md:text-3xl text-dark-gray/80 font-medium mb-10 tracking-tight">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark-gray/80 font-medium mb-10 md:mb-12 tracking-tight">
             52 Startups. 52 Weeks. One Mission.
           </p>
         </motion.div>
