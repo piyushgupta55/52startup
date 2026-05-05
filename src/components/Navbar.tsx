@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import { startups as initialStartups, Startup } from '@/data/startups';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [startups, setStartups] = useState<Startup[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,9 +20,18 @@ export default function Navbar() {
       }
     };
 
+    const saved = localStorage.getItem("52startup_data");
+    if (saved) {
+      setStartups(JSON.parse(saved));
+    } else {
+      setStartups(initialStartups);
+    }
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const currentWeek = startups.find(s => s.status === 'in-progress') || startups.find(s => s.status === 'completed') || initialStartups[0];
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -61,10 +72,16 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
+              href="/admin"
+              className="text-[14px] font-medium text-[#1A1A1A]/40 hover:text-[#E8610A] transition-colors duration-200"
+            >
+              Admin
+            </Link>
+            <Link
               href="#grid"
               className="text-[14px] font-medium text-[#1A1A1A] hover:text-[#E8610A] transition-colors duration-200 flex items-center gap-1.5"
             >
-              Week 2 <span className="w-2 h-2 rounded-full bg-india-green animate-pulse" />
+              Week {currentWeek.week} <span className="w-2 h-2 rounded-full bg-india-green animate-pulse" />
             </Link>
           </nav>
 
@@ -106,7 +123,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-left py-3 text-[16px] font-medium text-[#1A1A1A] flex items-center gap-2"
             >
-              Week 2 <span className="w-2 h-2 rounded-full bg-india-green animate-pulse" />
+              Week {currentWeek.week} <span className="w-2 h-2 rounded-full bg-india-green animate-pulse" />
             </Link>
             
             <div className="pt-4 mt-2 border-t border-[#E8E0D5] flex flex-col gap-3">

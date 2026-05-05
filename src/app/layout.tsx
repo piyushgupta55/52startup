@@ -29,8 +29,6 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-white text-gray-900 font-sans tracking-tight">
         <JsonLd />
-        <AnnouncementBar />
-        <Navbar />
         {children}
       </body>
     </html>

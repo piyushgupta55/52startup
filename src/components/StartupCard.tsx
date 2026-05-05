@@ -9,24 +9,14 @@ export function StartupCard({ startup }: { startup: Startup }) {
   const isUpcoming = startup.status === 'upcoming';
   const isInProgress = startup.status === 'in-progress';
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      className={`
-        group relative flex flex-col h-full rounded-2xl overflow-hidden border transition-all duration-300 hover:scale-105 hover:shadow-xl
-        ${isInProgress ? 'border-primary-orange ring-1 ring-primary-orange/50 shadow-[0_0_20px_rgba(232,97,10,0.2)]' : 'border-gray-200 hover:border-primary-orange/50'}
-        ${isUpcoming ? 'bg-gray-50 grayscale opacity-70' : 'bg-white'}
-      `}
-    >
+  const content = (
+    <>
       <div className="relative aspect-[16/9] w-full overflow-hidden">
         {startup.thumbnail ? (
-          <Image
+          <img
             src={startup.thumbnail}
             alt={startup.name}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         ) : (
           <div className={`w-full h-full flex items-center justify-center ${isUpcoming ? 'bg-gray-200/40 animate-pulse' : 'bg-gray-200/50'}`}>
@@ -63,14 +53,9 @@ export function StartupCard({ startup }: { startup: Startup }) {
           </span>
 
           {!isUpcoming && (
-            <a
-              href={startup.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-gray-100 hover:bg-primary-orange hover:text-white transition-all text-dark-gray/40"
-            >
+            <div className="p-2 rounded-lg bg-gray-100 group-hover:bg-primary-orange group-hover:text-white transition-all text-dark-gray/40">
               <ExternalLink size={16} />
-            </a>
+            </div>
           )}
         </div>
       </div>
@@ -81,6 +66,32 @@ export function StartupCard({ startup }: { startup: Startup }) {
             Week unlocking soon…
           </span>
         </div>
+      )}
+    </>
+  );
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      className={`
+        group relative flex flex-col h-full rounded-2xl overflow-hidden border transition-all duration-300 hover:scale-[1.02] hover:shadow-xl
+        ${isInProgress ? 'border-primary-orange ring-1 ring-primary-orange/50 shadow-[0_0_20px_rgba(232,97,10,0.25)]' : 'border-gray-200 hover:border-primary-orange/50'}
+        ${isUpcoming ? 'bg-gray-50 grayscale opacity-70' : 'bg-white cursor-pointer'}
+      `}
+    >
+      {!isUpcoming ? (
+        <a 
+          href={startup.url} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex flex-col h-full w-full"
+        >
+          {content}
+        </a>
+      ) : (
+        content
       )}
     </motion.div>
   );

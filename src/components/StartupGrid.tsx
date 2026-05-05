@@ -1,12 +1,23 @@
 'use client';
 
-import { startups } from '@/data/startups';
+import { startups as initialStartups, Startup } from '@/data/startups';
 import { StartupCard } from './StartupCard';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function StartupGrid() {
+  const [startups, setStartups] = useState<Startup[]>([]);
   const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("52startup_data");
+    if (saved) {
+      setStartups(JSON.parse(saved));
+    } else {
+      setStartups(initialStartups);
+    }
+  }, []);
+
   const visibleStartups = showAll ? startups : startups.slice(0, 8);
 
   return (
