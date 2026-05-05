@@ -17,10 +17,12 @@ export default function CurrentWeekBanner() {
     }
   }, []);
 
-  const currentWeek = startups.find(s => s.status === 'in-progress') || startups[0] || initialStartups[0];
+  const currentWeek = startups.find(s => s.status === 'in-progress') 
+    || [...startups].reverse().find(s => s.status === 'completed') 
+    || initialStartups[0];
 
   return (
-    <section className="py-12 px-4 bg-warm-white border-y border-gray-200">
+    <section className="pt-16 pb-8 px-4 bg-warm-white border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}

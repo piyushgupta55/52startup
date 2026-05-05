@@ -31,7 +31,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const currentWeek = startups.find(s => s.status === 'in-progress') || startups.find(s => s.status === 'completed') || initialStartups[0];
+  // Find the most recent active week (in-progress takes priority, then latest completed)
+  const currentWeek = startups.find(s => s.status === 'in-progress') 
+    || [...startups].reverse().find(s => s.status === 'completed') 
+    || initialStartups[0];
 
   const navLinks = [
     { name: 'About', href: '#about' },
