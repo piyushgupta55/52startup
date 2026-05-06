@@ -75,12 +75,6 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/admin"
-              className="text-[14px] font-medium text-[#1A1A1A]/40 hover:text-[#E8610A] transition-colors duration-200"
-            >
-              Admin
-            </Link>
-            <Link
               href="#grid"
               className="text-[14px] font-medium text-[#1A1A1A] hover:text-[#E8610A] transition-colors duration-200 flex items-center gap-1.5"
             >
